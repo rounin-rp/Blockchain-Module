@@ -97,6 +97,7 @@ class Block():
         height = self.height
         parent_hash = self.parent_hash
         while True:
+            #Proof of work
             nonce = randint(2**3,2**50)
             hashNonce = sha256(
                 str(height).encode()+
@@ -107,7 +108,7 @@ class Block():
                 str(allhash).encode()+
                 str(hashNonce).encode()
                 ).hexdigest()
-            if(Hash[0:4] == '0000'):
+            if(Hash[0:4] == '0000'): #proof of work ---> hash begining with leading four 0's
                 break
         self.hash = Hash
         self.nonce = nonce
