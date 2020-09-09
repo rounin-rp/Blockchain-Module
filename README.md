@@ -15,6 +15,8 @@ How to use :
 		>>> bc = Blockchain()
 	-> to insert data use:
 		>>> bc.addTransaction(sender,reciever)
+	-> to show/print the blockchain just print the object:
+		>>> print(bc)
 	-> it will automatically mine after the number of transactions reaches more than 8
 	-> data will be saved automatically
 ```
